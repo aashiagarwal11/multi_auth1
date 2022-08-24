@@ -1,0 +1,57 @@
+@include('header')
+<h1 class="text-center"><b>Fetch Data From Database</b></h1>
+<table class="table table-bordered table-hover table-striped" style="margin: 20px;">
+    <thead>
+        <th>ID</th>
+        <th>symbol</th>
+        <th>name</th>
+        <th>price</th>
+        <th>changesPercentage</th>
+        <th>change</th>
+        <th>dayLow</th>
+        <th>dayHigh</th>
+        <th>yearHigh</th>
+        <th>yearLow</th>
+        <th>marketCap</th>
+        <th>priceAvg50</th>
+        <th>priceAvg200</th>
+        <th>volume</th>
+        <th>avgVolume</th>
+        <th>exchange</th>
+        <th>open</th>
+        <th>previousClose</th>
+        <th>eps</th>
+        <th>pe</th>
+        <th>earningsAnnouncement</th>
+        <th>sharesOutstanding</th>
+    </thead>
+
+    <tbody>
+        @foreach ($data as $value)
+        <tr>
+            <td>{{$value->id}}</td>
+            <td>{{$value->symbol}}</td>
+            <td>{{$value->name}}</td>
+            <td>{{$value->price}}</td>
+            <td>{{$value->changesPercentage}}</td>
+            <td>{{$value->change}}</td>
+            <td>{{$value->dayLow}}</td>
+            <td>{{$value->dayHigh}}</td>
+            <td>{{$value->yearHigh}}</td>
+            <td>{{$value->yearLow}}</td>
+            <td>{{$value->marketCap}}</td>
+            <td>{{$value->priceAvg50}}</td>
+            <td>{{$value->priceAvg200}}</td>
+            <td>{{$value->volume}}</td>
+            <td>{{$value->avgVolume}}</td>
+            <td>{{$value->exchange}}</td>
+            <td>{{$value->open}}</td>
+            <td>{{$value->previousClose}}</td>
+            <td>{{$value->eps}}</td>
+            <td>{{$value->pe}}</td>
+            <td>{{$value->earningsAnnouncement}}</td>
+            <td>{{$value->sharesOutstanding}}</td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
